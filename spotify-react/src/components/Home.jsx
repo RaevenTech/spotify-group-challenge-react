@@ -1,8 +1,11 @@
 import React from 'react'
 import AlbumCard from './AlbumCard'
 import { Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+
 
 class Home extends React.Component {
+  
   state = {
     rockSongs: [],
     popSongs: [],
@@ -95,6 +98,7 @@ class Home extends React.Component {
       await this.handleArtist(hipHopRandomArtists[l], 'hipHopSongs')
   }
 
+
   render() {
     return (
       <Col className='col-12 col-md-9 offset-md-3 mainPage'>
@@ -103,8 +107,8 @@ class Home extends React.Component {
             <div>TRENDING</div>
             <div>PODCAST</div>
             <div>MOODS AND GENRES</div>
-            <div>NEW RELEASES</div>
-            <div>DISCOVER</div>
+            <Link to="/favourte"><div>NEW RELEASES</div></Link>        
+            <div>FAOURITE</div>
           </div>
         </Row>
         {this.props.searchResults.length > 0 && (
