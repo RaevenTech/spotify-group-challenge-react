@@ -9,23 +9,23 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        removeFromFavourite: (songId) => dispatch(removeFromFavouriteSongs(songId))
+        removeFromFavourite: (song) => dispatch(removeFromFavouriteSongs(song))
     }
 }
 
 
 
- const FavoritesList = (state, removerfromFavourite) => {
+ const FavoritesList = (song, removerfromFavourite) => {
   return (
     <div>
          <Container>
         <Row>
           <Col xs={12}>
             <ListGroup>
-              {favouriteSongs.song.map((song, i) => (
+              {song.map((song, i) => (
                 <ListGroupItem key={i}>
                   <Badge
-                     variant="danger"  onClick={() => removeFromFavourite(song.id)}
+                     variant="danger"  onClick={() => removeFromFavouriteSongs(song.id)}
                   >Remove</Badge>                
                 </ListGroupItem>
               ))}
