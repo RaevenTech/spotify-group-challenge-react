@@ -1,29 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 let defaultState = {
-  playingSong: {},
- 
+  playingSong: {
+      title_short: "",
+      artist:{
+          name:""
+      }
+  },
 };
 
 const addToPlayerSlice = createSlice({
-    name: "favouriteSongs",
-    initialState: defaultState,
-  
-    reducers: {
+  name: "favouriteSongs",
+  initialState: defaultState,
 
-       addToPlayer: (state, action) => {
-        return {
-          ...state,
-          playingSong: action.payload
-        };
-      }, 
-  
-   
-  
+  reducers: {
+    addToPlayer: (state, action) => {
+      return {
+        ...state,
+        playingSong: action.payload,
+      };
     },
-  });
-  
-  export default addToPlayerSlice.reducer;
-  export const { addToPlayer } = addToPlayerSlice.actions;
-  
-  
+  },
+});
+
+export default addToPlayerSlice.reducer;
+export const { addToPlayer } = addToPlayerSlice.actions;

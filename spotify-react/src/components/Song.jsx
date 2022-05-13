@@ -3,10 +3,7 @@ import { connect } from "react-redux";
 import { addToPlayer } from "../slice/addToPlayer/addToPlayerSlice.js";
 
 const mapStateToProps = (state) => {
-  return {
-
-    
-  };
+  return {};
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -23,15 +20,15 @@ const Song = ({ track, addSongToPlayer }) => (
  
 ); */
 
-const Song = ({ track }) => {
+const Song = ({ track, addSongToPlayer }) => {
 
-  
+ console.log(addSongToPlayer);
   
   return (
     <>
       <div
         onClick={() => {
-         // addSongToPlayer(track);
+          addSongToPlayer(track);
         }}
         className="py-3 trackHover"
       >

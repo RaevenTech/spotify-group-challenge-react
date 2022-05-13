@@ -26,9 +26,10 @@ const favouriteSongsSlice = createSlice({
     },
 
     removeFromFavouriteSongs : (state,action)=>{
+    
         return {
             ...state,
-            favouriteSongs: state.favouriteSongs.filter((song, i)=> song._id !== action.payload  )
+            favouriteSongs: state.favouriteSongs.filter((song, i)=> song.id !== action.payload  )
         }
     }
   },

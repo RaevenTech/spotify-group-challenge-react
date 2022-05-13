@@ -1,0 +1,44 @@
+p {
+  margin-bottom: 0 !important;
+}
+.floatingDIv {
+  position: fixed;
+  background-color: aliceblue;
+  height: 80px;
+  width: 15vw;
+  top: bottom;
+  left: 15vw;
+
+  color: rgb(37, 35, 35);
+  z-index: 10000;
+  padding: 6px 10px 6px 10px;
+}
+
+.wrapperMusic {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+}
+.wrapperMusic > div:first-of-type {
+  width: 5vw;
+  height: 100%;
+  background-color: black;
+}
+.wrapperMusic > div:nth-child(2) {
+  width: 50%;
+
+}
+.wrapperMusic > div:nth-child(2) > p:first-of-type {
+  font-size: 12px;
+  font-weight: 700;
+}
+.wrapperMusic > div:nth-child(2) > p:last-of-type {
+  font-size: 11px;
+}
+
+.wrapperMusic > div:last-of-type {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}

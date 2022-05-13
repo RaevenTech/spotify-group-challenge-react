@@ -1,9 +1,19 @@
 import React from "react";
 import { Row } from "react-bootstrap";
+import SongDetail from "./SongDetail.jsx";
+import { connect } from "react-redux";
 
-const Player = () => (
+
+const mapStateToProps = (state) => {
+  return {
+    song: state.addSongToPlayer.playingSong,
+  };
+};
+const Player = ({song}) => (
   
-  <div className="container-fluid fixed-bottom bg-container pt-1">
+  <div className="container-fluid fixed-bottom bg-container pt-1 ourPlayerDIv">
+
+ { song ? <SongDetail/>: <></>}
     <Row>
       <div className="col-lg-10 offset-lg-2">
         <Row>
@@ -45,4 +55,5 @@ const Player = () => (
   </div>
 );
 
-export default Player;
+
+export default connect(mapStateToProps)(Player);
