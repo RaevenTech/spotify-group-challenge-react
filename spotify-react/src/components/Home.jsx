@@ -2,6 +2,7 @@ import React from 'react'
 import AlbumCard from './AlbumCard'
 import { Row, Col } from 'react-bootstrap'
 
+
 class Home extends React.Component {
   state = {
     rockSongs: [],
@@ -103,8 +104,8 @@ class Home extends React.Component {
             <div>TRENDING</div>
             <div>PODCAST</div>
             <div>MOODS AND GENRES</div>
-            <div>NEW RELEASES</div>
-            <div>DISCOVER</div>
+            <div>OLD</div>
+            <div>FAVOURITES</div>
           </div>
         </Row>
         {this.props.searchResults.length > 0 && (
@@ -167,6 +168,7 @@ class Home extends React.Component {
                   </Row>
                 </div>
               </Col>
+              
             </Row>
           </>
         )}

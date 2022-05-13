@@ -49,7 +49,7 @@ const SongDetail = ({ song, addToFavourite, removerFromFav }) => {
       <div className="floatingDIv">
         <div className="wrapperMusic">
           <div>
-            <img src="" />
+            <img src="" alt=" album Cover" />
           </div>
           <div>
             <p>{song.title_short}</p>

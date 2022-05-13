@@ -3,13 +3,13 @@ p {
 }
 .floatingDIv {
   position: fixed;
-  background-color: aliceblue;
+  background-color: rgba(240, 248, 255, 0);
   height: 80px;
   width: 15vw;
   top: bottom;
   left: 15vw;
 
-  color: rgb(37, 35, 35);
+  color: rgb(142, 142, 142);
   z-index: 10000;
   padding: 6px 10px 6px 10px;
 }
