@@ -44,12 +44,13 @@ const SongDetail = ({ song, addToFavourite, removerFromFav }) => {
     removerFromFav(song.id);
     setSelected(false);
   };
+  console.log(song);
   return (
     <>
       <div className="floatingDIv">
         <div className="wrapperMusic">
           <div>
-            <img src="" />
+            <img src={song.preview} />
           </div>
           <div>
             <p>{song.title_short}</p>

@@ -1,6 +1,14 @@
 import React from "react";
 import Song from "./Song";
 import { Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => {
+  return {
+    songLength: state.addSongToQueue.songsInQueue.length,
+  };
+};
 
 class Album extends React.Component {
   state = {
@@ -38,6 +46,7 @@ class Album extends React.Component {
   };
 
   render() {
+    console.log(this.props.songLength);
     return (
       <div className="col-12 col-md-9 offset-md-3 mainPage">
         <Row className="mb-3">
@@ -74,6 +83,9 @@ class Album extends React.Component {
           )}
           <div className="col-md-8 p-5">
             <Row>
+              <Link to={"/queues"}>
+                <button variant="success">{this.props.songLength}</button>
+              </Link>
               <div className="col-md-10 mb-5" id="trackList">
                 {this.state.songs.map((song) => (
                   <Song track={song} key={song.id} />
@@ -87,4 +99,4 @@ class Album extends React.Component {
   }
 }
 
-export default Album;
+export default connect(mapStateToProps)(Album);
